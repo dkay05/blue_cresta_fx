@@ -18,7 +18,7 @@ import {
   Monitor,
   Award
 } from "lucide-react"
-import { OpenAccountDialog } from "@/components/auth-dialogs"
+import { Link } from 'react-router-dom'
 
 export default function PropFirmPage() {
   return (
@@ -57,14 +57,12 @@ export default function PropFirmPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <OpenAccountDialog
-                  trigger={
-                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-4 sm:py-6 text-base font-semibold w-full sm:w-auto">
-                      Get Started
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  }
-                />
+                <Link to="/user/signup">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-4 sm:py-6 text-base font-semibold w-full sm:w-auto">
+                    Get Started
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
                 <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-foreground px-6 sm:px-8 py-4 sm:py-6 text-base font-semibold w-full sm:w-auto">
                   Learn More
                 </Button>
@@ -406,14 +404,12 @@ export default function PropFirmPage() {
             <p className="text-white/90 text-lg mb-10 max-w-2xl mx-auto">
               Get started with BLUE CRESTA FX and build a professional proprietary trading business with our complete infrastructure.
             </p>
-            <OpenAccountDialog
-              trigger={
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 py-6 text-base font-semibold">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              }
-            />
+            <Link to="/user/signup">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-10 py-6 text-base font-semibold">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </section>
 

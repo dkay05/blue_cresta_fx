@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { LoginDialog, OpenAccountDialog } from "@/components/auth-dialogs"
 
 const marketLinks = [
   { href: "/markets/forex", label: "Forex" },
@@ -110,18 +109,14 @@ export function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <LoginDialog
-              trigger={
-                <Button className="pill-button border-2 border-primary text-white hover:bg-primary hover:text-white text-sm">Log In</Button>
-              }
-            />
-            <OpenAccountDialog
-              trigger={
-                <Button className="pill-button pill-button-primary text-sm">
-                  Open Account
-                </Button>
-              }
-            />
+            <Link to="/user/login">
+              <Button className="pill-button border-2 border-primary text-white hover:bg-primary hover:text-white text-sm">Log In</Button>
+            </Link>
+            <Link to="/user/signup">
+              <Button className="pill-button pill-button-primary text-sm">
+                Open Account
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -172,16 +167,12 @@ export function Navbar() {
               <Link to="/partnership" className="block text-sm font-medium py-2 pl-3 hover:text-primary transition-colors text-white" onClick={() => setIsMobileMenuOpen(false)}>Partnership</Link>
               <Link to="/about" className="block text-sm font-medium py-2 pl-3 hover:text-primary transition-colors text-white" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
               <div className="flex flex-col gap-3 pt-4">
-                <LoginDialog
-                  trigger={
-                    <Button className="w-full pill-button pill-button-outline" onClick={() => setIsMobileMenuOpen(false)}>Log In</Button>
-                  }
-                />
-                <OpenAccountDialog
-                  trigger={
-                    <Button className="w-full pill-button pill-button-primary" onClick={() => setIsMobileMenuOpen(false)}>Open Account</Button>
-                  }
-                />
+                <Link to="/user/login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full pill-button pill-button-outline">Log In</Button>
+                </Link>
+                <Link to="/user/signup" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full pill-button pill-button-primary">Open Account</Button>
+                </Link>
               </div>
             </nav>
           </div>

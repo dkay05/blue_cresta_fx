@@ -1,6 +1,6 @@
 ﻿
+import { Link } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
-import { OpenAccountDialog } from "@/components/auth-dialogs"
 import { Check, Star, Zap, Target, TrendingUp } from "lucide-react"
 
 const accountTypes = [
@@ -117,16 +117,14 @@ export function AccountTypesGrid() {
 
               <p className="text-sm text-muted-foreground mb-6">{account.description}</p>
 
-              <OpenAccountDialog
-                trigger={
-                  <Button
-                    className={`w-full ${account.highlighted ? "bg-primary hover:bg-primary/90 text-white" : ""}`}
-                    variant={account.highlighted ? "default" : "outline"}
-                  >
-                    Open Account
-                  </Button>
-                }
-              />
+              <Link to="/user/signup">
+                <Button
+                  className={`w-full ${account.highlighted ? "bg-primary hover:bg-primary/90 text-white" : ""}`}
+                  variant={account.highlighted ? "default" : "outline"}
+                >
+                  Open Account
+                </Button>
+              </Link>
             </div>
           ))}
         </div>

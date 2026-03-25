@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { OpenAccountDialog } from "@/components/auth-dialogs"
+import { Link } from 'react-router-dom'
 
 export default function HeatmapPage() {
   return (
@@ -22,7 +22,7 @@ export default function HeatmapPage() {
               <p className="text-lg text-white/80 mb-8 leading-relaxed">
                 Visualize market movements at a glance with our interactive heatmap tool.
               </p>
-              <OpenAccountDialog trigger={<Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6">Start Trading <ArrowRight className="w-5 h-5 ml-2" /></Button>} />
+              <Link to="/user/signup"><Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6">Start Trading <ArrowRight className="w-5 h-5 ml-2" /></Button></Link>
             </div>
           </div>
         </section>

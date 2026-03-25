@@ -1,6 +1,6 @@
 ﻿
+import { Link } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
-import { OpenAccountDialog } from "@/components/auth-dialogs"
 import { ArrowRight, Download } from "lucide-react"
 
 
@@ -23,14 +23,12 @@ export function MarketHero({ headline, subhead, ctaPrimary = "Open Account", cta
             {subhead}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <OpenAccountDialog
-              trigger={
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-semibold">
-                  {ctaPrimary}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              }
-            />
+            <Link to="/user/signup">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-base font-semibold">
+                {ctaPrimary}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-foreground px-8 py-6 text-base font-semibold">
               <Download className="w-5 h-5 mr-2" />
               {ctaSecondary}
