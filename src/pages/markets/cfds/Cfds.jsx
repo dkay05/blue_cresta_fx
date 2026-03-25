@@ -126,7 +126,7 @@ export default function CFDsPage() {
     const mappedSymbol = symbolMap[symbol] || symbol
     setChartSymbol(mappedSymbol)
     if (typeof window !== "undefined") {
-      localStorage.setItem("vxness_chart_symbol", mappedSymbol)
+      localStorage.setItem("Bluecrestafx_chart_symbol", mappedSymbol)
     }
     document.getElementById("live-chart")?.scrollIntoView({ behavior: "smooth" })
   }, [])

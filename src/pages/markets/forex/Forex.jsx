@@ -120,7 +120,7 @@ export default function ForexPage() {
   const handleLoadChart = useCallback((symbol) => {
     setChartSymbol(`FX:${symbol}`)
     if (typeof window !== "undefined") {
-      localStorage.setItem("vxness_chart_symbol", `FX:${symbol}`)
+      localStorage.setItem("Bluecrestafx_chart_symbol", `FX:${symbol}`)
     }
     document.getElementById("live-chart")?.scrollIntoView({ behavior: "smooth" })
   }, [])

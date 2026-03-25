@@ -87,7 +87,7 @@ export function Footer() {
               </Link>
             </div>
             <p className="text-sm text-white/40">
-              © {new Date().getFullYear()} VXNESS. All rights reserved.
+              © {new Date().getFullYear()} Bluecrestafx. All rights reserved.
             </p>
           </div>
         </div>

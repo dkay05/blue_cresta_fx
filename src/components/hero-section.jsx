@@ -37,12 +37,12 @@ export function HeroSection() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-100"
+        className="absolute inset-0 w-full h-full object-cover opacity-100 brightness-125"
       >
         <source src="/video/video_hero.mp4" type="video/mp4" />
       </video>
       {/* Overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0D1A]/60 via-[#0A0D1A]/80 to-[#0A0D1A]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0D1A]/40 via-[#0A0D1A]/60 to-[#0A0D1A]" />
       
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
