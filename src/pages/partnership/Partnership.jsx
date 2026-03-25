@@ -295,7 +295,7 @@ export default function PartnershipPage() {
                 </div>
               </div>
 
-              <div className="bg-white border border-border rounded-2xl p-8 shadow-lg">
+              <div className="bg-slate-900 border border-border rounded-2xl p-8 shadow-lg">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
